@@ -1,21 +1,25 @@
 {
   "name": "metalsmith-jslint",
+  "author": "Steven Schobert <spschobert@gmail.com>",
   "version": "0.1.0",
   "description": "A Metalsmith plugin for JSLint.",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec test/test.js"
-  },
+  "keywords": [
+    "metalsmith",
+    "jslint"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/stevenschobert/metalsmith-jslint",
   "repository": {
     "type": "git",
     "url": "git://github.com/stevenschobert/metalsmith-jslint.git"
   },
-  "author": "Steven Schobert <spschobert@gmail.com>",
-  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec test/test.js"
+  },
   "bugs": {
     "url": "https://github.com/stevenschobert/metalsmith-jslint/issues"
   },
-  "homepage": "https://github.com/stevenschobert/metalsmith-jslint",
+  "main": "index.js",
   "dependencies": {
     "jslint": "^0.2.11"
   },
