@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/stevenschobert/metalsmith-jslint/issues"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "jslint": "^0.2.11"
   },
