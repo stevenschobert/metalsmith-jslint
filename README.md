@@ -2,7 +2,7 @@ metalsmith-jslint
 =================
 [![Build Status](https://travis-ci.org/stevenschobert/metalsmith-jslint.png?branch=master)](https://travis-ci.org/stevenschobert/metalsmith-jslint)
 
-A [Metalsmith](https://github.com/segmentio/metalsmith) plugin for JSLint.
+A JSLint plugin for [Metalsmith](https://github.com/segmentio/metalsmith).
 
 ## Getting Started
 
