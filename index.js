@@ -7,11 +7,11 @@
 
       defaultArgs = jslint.parseArgs(process.argv),
 
-      fileIsJs = function fileIsJs(filename) {
+      fileIsJs = function fileIsJs (filename) {
         return filename.split('.').pop().toLowerCase() === 'js';
       },
 
-      metalLint = function metalLint(files, metalsmith, done) {
+      lintRunner = function lintRunner (files, metalsmith, done) {
         Object.keys(files).forEach(function(filename) {
           var file = files[filename],
               lint;
@@ -20,8 +20,20 @@
             reporter.report(filename, lint, defaultArgs.color, defaultArgs.terse);
           }
         });
+
+        // throw exception if set to fail on error
+        if (this.failOnError === true) {
+          throw new Error('Found linty code!');
+        }
+
         done();
+      },
+
+      metalLint = function metalLint (options) {
+        var config = options || {};
+        return lintRunner.bind(config);
       };
+
 
   module.exports = metalLint;
 }());
