@@ -51,6 +51,34 @@ Metalsmith(__dirname)
 Throw an exception if any lint is found. You can either have this halt your build process, or handle
 the error more directly inside the Metalsmith's `.build` callback.
 
+## Linter Options
+
+The best way to control the linter settings for your project, is by adding a `.jslintrc` file at the
+root of your project. JSLint will automatically detect that file and parse the options when linting
+your code.
+
+__For a list of options and command-line flags, check
+[JSLint.com](http://www.jslint.com/lint.html#options).__
+
+Here is an example `.jslintrc` file:
+
+```json
+{
+  "color": true,
+  "indent": 2
+}
+```
+
+You may also options via the command-line, when you run your Metalsmith file:
+
+```sh
+node --color --indent=2 ./build.js
+```
+
 ## Credits
 
-Thanks to [Segment.io](http://github.com/segmentio) for creating and open-sourcing Metalsmith!
+Thanks to [Segment.io](http://github.com/segmentio) for creating and open-sourcing
+[Metalsmith](https://github.com/segmentio/metalsmith)!
+
+Also thanks to [Reid Burke](https://github.com/reid) for his library,
+[node-jslint](https://github.com/reid/node-jslint), on which this library is built.
