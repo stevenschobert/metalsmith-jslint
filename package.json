@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-jslint",
   "author": "Steven Schobert <spschobert@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A JSLint plugin for Metalsmith.",
   "keywords": [
     "metalsmith",
