@@ -7,11 +7,18 @@
 
       defaultArgs = jslint.parseArgs(process.argv),
 
+      fileIsJs = function fileIsJs(filename) {
+        return filename.split('.').pop().toLowerCase() === 'js';
+      },
+
       metalLint = function metalLint(files, metalsmith, done) {
         Object.keys(files).forEach(function(filename) {
           var file = files[filename],
-              lint = linter.lint(file.contents.toString(), defaultArgs);
-          reporter.report(filename, lint, defaultArgs.color, defaultArgs.terse);
+              lint;
+          if (fileIsJs(filename)) {
+            lint = linter.lint(file.contents.toString(), defaultArgs);
+            reporter.report(filename, lint, defaultArgs.color, defaultArgs.terse);
+          }
         });
         done();
       };
