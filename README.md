@@ -1,5 +1,6 @@
 metalsmith-jslint
 =================
+[![Build Status](https://travis-ci.org/stevenschobert/metalsmith-jslint.png?branch=master)](https://travis-ci.org/stevenschobert/metalsmith-jslint)
 
 A [Metalsmith](https://github.com/segmentio/metalsmith) plugin for JSLint.
 
@@ -30,7 +31,7 @@ Metalsmith(__dirname)
   .build();
 ```
 
-Notice that you need to actually invoke the function insie the `.use` method. This is because you
+Notice that you need to actually invoke the function inside the `.use` method. This is because you
 can also pass options to JSLint to customize it!
 
 ## Options
