@@ -1,7 +1,7 @@
 metalsmith-jslint
 =================
 
-A Metalsmith plugin for JSLint.
+A [Metalsmith](https://github.com/segmentio/metalsmith) plugin for JSLint.
 
 ## Getting Started
 
