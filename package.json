@@ -1,0 +1,22 @@
+{
+  "name": "metalsmith-jslint",
+  "version": "0.1.0",
+  "description": "A Metalsmith plugin for JSLint.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stevenschobert/metalsmith-jslint.git"
+  },
+  "author": "Steven Schobert <spschobert@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenschobert/metalsmith-jslint/issues"
+  },
+  "homepage": "https://github.com/stevenschobert/metalsmith-jslint",
+  "dependencies": {
+    "jslint": "^0.2.11"
+  }
+}
