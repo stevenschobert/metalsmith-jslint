@@ -1,4 +1,4 @@
 metalsmith-jslint
 =================
 
-A Metalsmith wrapper for JSLint.
+A Metalsmith plugin for JSLint.
