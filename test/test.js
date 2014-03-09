@@ -23,10 +23,10 @@
     });
 
     beforeEach(function (done) {
-      // clean out build directory
-      rimraf(path.join(__dirname, 'out/'), done);
       // reset captured logs
       logs = [];
+      // clean out build directory
+      rimraf(path.join(__dirname, 'out/'), done);
     });
 
     describe('core', function () {
@@ -72,7 +72,18 @@
     });
 
     describe('failOnError option', function () {
-      it('should allow a fail on error option', function () {
+      it('should not fail if no errors found', function (done) {
+        metal.source('fixtures/clean')
+          .use(jslint({
+            failOnError: true
+          }))
+          .build(function (err) {
+            expect(err).to.be(null);
+            done();
+          });
+      });
+
+      it('should throw exception if lint found', function () {
         expect(metal.use(jslint({
           failOnError: true
         })).build).to.throwError();
