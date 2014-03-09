@@ -14,7 +14,7 @@ website and check out the documentation.
 Metalsmith-jslint is available via npm. Simply install it and require it in your application.
 
 ```sh
-npm install --save metalsmith-json
+npm install --save metalsmith-jslint
 ```
 
 ## Usage
